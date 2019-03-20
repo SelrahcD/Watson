@@ -224,6 +224,8 @@ def stop(watson, at_, message, roti):
     """
     if roti is not None:
         tags = [u'roti{}'.format(roti)]
+    else:
+        tags = []
 
     frame = watson.stop(stop_at=at_, message=message, tags=tags)
     output_str = u"Stopping project {}{}, started {} and stopped {}. (id: {})"
